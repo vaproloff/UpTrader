@@ -1,0 +1,33 @@
+{% load menu_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UpTrader - {% block title %}Page title{% endblock %}</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        li.active > a {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    {% draw_menu 'Main menu' %}
+
+    <div>
+        {% block content %}
+            Main content
+        {% endblock %}
+    </div>
+
+</body>
+</html>
